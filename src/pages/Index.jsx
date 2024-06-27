@@ -42,8 +42,10 @@ const Index = () => {
   return (
     <div className="h-screen w-screen flex items-center justify-center p-4 bg-background text-foreground">
       <header className="flex items-center justify-between p-4 bg-card text-card-foreground">
-        <img src={flyingBirdLogo} alt="Flying Bird Logo" className="h-12" />
-        <h1 className="text-2xl">Todo App</h1>
+        <div className="flex items-center space-x-2">
+          <img src={flyingBirdLogo} alt="Flying Bird Logo" className="h-12" />
+          <h1 className="text-2xl">Todo App</h1>
+        </div>
       </header>
       <Card className="w-full max-w-lg bg-card text-card-foreground mt-4">
         <CardHeader>
