@@ -52,7 +52,7 @@ const Index = () => {
               placeholder="Add a new task"
               className="flex-grow"
             />
-            <Button onClick={addTask}>Add</Button>
+            <Button onClick={addTask} className="bg-yellow-500 hover:bg-yellow-600">Add</Button>
           </div>
           <Separator />
           <ScrollArea className="h-64">
