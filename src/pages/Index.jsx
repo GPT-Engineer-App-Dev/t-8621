@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import flyingBirdLogo from "@/public/images/flying-bird-logo.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,7 +41,11 @@ const Index = () => {
 
   return (
     <div className="h-screen w-screen flex items-center justify-center p-4 bg-background text-foreground">
-      <Card className="w-full max-w-lg bg-card text-card-foreground">
+      <header className="flex items-center justify-between p-4 bg-card text-card-foreground">
+        <img src={flyingBirdLogo} alt="Flying Bird Logo" className="h-12" />
+        <h1 className="text-2xl">Todo App</h1>
+      </header>
+      <Card className="w-full max-w-lg bg-card text-card-foreground mt-4">
         <CardHeader>
           <CardTitle className="text-center text-2xl">Todo App</CardTitle>
         </CardHeader>
