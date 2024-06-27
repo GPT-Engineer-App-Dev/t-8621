@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import flyingBirdLogo from "@/public/images/flying-bird-logo.png";
+import flyingBirdLogo from "../../public/images/flying-bird-logo.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
