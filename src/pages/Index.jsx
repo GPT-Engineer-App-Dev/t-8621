@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,6 +11,10 @@ const Index = () => {
   const [newTask, setNewTask] = useState("");
   const [editTask, setEditTask] = useState(null);
   const [editTaskText, setEditTaskText] = useState("");
+
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
 
   const addTask = () => {
     if (newTask.trim() !== "") {
@@ -35,8 +39,8 @@ const Index = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center p-4">
-      <Card className="w-full max-w-lg">
+    <div className="h-screen w-screen flex items-center justify-center p-4 bg-background text-foreground">
+      <Card className="w-full max-w-lg bg-card text-card-foreground">
         <CardHeader>
           <CardTitle className="text-center text-2xl">Todo App</CardTitle>
         </CardHeader>
@@ -53,7 +57,7 @@ const Index = () => {
           <Separator />
           <ScrollArea className="h-64">
             {tasks.map((task) => (
-              <div key={task.id} className="flex justify-between items-center p-2 border-b">
+              <div key={task.id} className="flex justify-between items-center p-2 border-b border-border">
                 <span>{task.text}</span>
                 <div className="space-x-2">
                   <Dialog>
